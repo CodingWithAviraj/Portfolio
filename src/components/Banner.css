@@ -1,0 +1,55 @@
+/* Banner.css */
+.banner {
+    background-color: #f4f4f4;
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .slideshow-container {
+    max-width: 100%;
+    overflow: hidden;
+    height: 30vh; /* Set height to 30% of the viewport height */
+    position: relative;
+  }
+  
+  .slideshow {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slideshow img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .message-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .pagination-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .pagination-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-dots span.active {
+    background-color: #333;
+  }
+  
