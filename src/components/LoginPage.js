@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
+import Data from '../data';
 
 const LoginPage = () => {
   
@@ -27,13 +28,18 @@ const LoginPage = () => {
     // Handle login form submission
     try{
       console.log(formData);
-      const res = await axios.post('http://localhost:5000/login', formData);
-      console.log("server responese:"  + res.data.token);
+      console.log(`server: ${Data.server}/login`);
+     // const res = await axios.post('http://localhost:5000/login', formData);
+      const res = await axios.post(`${Data.server}/login`, formData);
+     
+      console.log("server responese:"  + res.data.message + "\n" + res.data.token);
       const data = {
         token: res.data.token,
         time : Date.now()
       }
       localStorage.setItem("mytoken", JSON.stringify(data));
+      //alert('Sign up successful! You will be redirected to the home page.');
+      console.log("localstorage data:" + JSON.parse(localStorage.getItem('mytoken')));
       navigate('/');
     }
     catch(err){

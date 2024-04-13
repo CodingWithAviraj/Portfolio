@@ -8,7 +8,6 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("in useEffect fun");
     const checkToken = () => {
       try {
         const mytoken = JSON.parse(localStorage.getItem('mytoken'));
@@ -19,7 +18,7 @@ const HomePage = () => {
           const currentTime = Date.now();
 
           if (expirationTime < currentTime) {
-            console.log("expire time");
+            console.log("session expired");
             localStorage.removeItem('mytoken');
             navigate('/login');
           }else{
