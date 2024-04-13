@@ -20,13 +20,13 @@ const HomePage = () => {
           if (expirationTime < currentTime) {
             console.log("session expired");
             localStorage.removeItem('mytoken');
-            navigate('/login');
+            navigate('/Portfolio/login');
           }else{
             console.log("session not expired");
           }
         } 
         else {
-          navigate('/login');
+          navigate('/Portfolio/login');
         }
       } catch (error) {
         console.error('Error:', error);

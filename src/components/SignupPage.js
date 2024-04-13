@@ -32,11 +32,8 @@ const SignupPage = () => {
       //const response = await axios.post('http://localhost:5000/signup', formData);
       const response = await axios.post(`${Data.server}/signup`, formData);
       console.log("server response: ", response.data);
-      // Display success message to the user
       alert('Sign up successful! You will be redirected to the login page.');
-      // Redirect to the home page
-      // setRedirect(true);
-      navigate('/login');
+      navigate('/Portfolio/login');
     } catch (error) {
       console.error("Error sending data: ", error);
       // Display error message to the user

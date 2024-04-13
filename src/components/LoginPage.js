@@ -40,7 +40,7 @@ const LoginPage = () => {
       localStorage.setItem("mytoken", JSON.stringify(data));
       //alert('Sign up successful! You will be redirected to the home page.');
       console.log("localstorage data:" + JSON.parse(localStorage.getItem('mytoken')));
-      navigate('/');
+      navigate('/Portfolio/');
     }
     catch(err){
       console.error("login server error" + err);

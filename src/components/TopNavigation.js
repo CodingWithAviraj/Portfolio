@@ -9,19 +9,19 @@ const TopNavigation = () => {
     <nav className="top-navigation">
       <ul className="nav-links">
         <li>
-          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/Portfolio/" className="nav-link">Home</Link>
         </li>
         <li>
-          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/Portfolio/about" className="nav-link">About</Link>
         </li>
         <li>
-          <Link to="/contact" className="nav-link">Contact</Link>
+          <Link to="/Portfolio/contact" className="nav-link">Contact</Link>
         </li>
         <li>
-          <Link to="/login" className="nav-link">Login</Link>
+          <Link to="/Portfolio/login" className="nav-link">Login</Link>
         </li>
         <li>
-          <Link to="/signup" className="nav-link">Signup</Link>
+          <Link to="/Portfolio/signup" className="nav-link">Signup</Link>
         </li>
       </ul>
     </nav>
