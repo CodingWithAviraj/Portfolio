@@ -36,7 +36,7 @@ const Banner = () => {
             <img
               key={index}
               src={image.url}
-              alt={`Image ${index + 1}`}
+              alt={`${index + 1}`}
               style={{ display: currentImageIndex === index ? 'block' : 'none' }}
             />
           ))}
